@@ -34,4 +34,15 @@ const filter = data.filter(
 displayProduct(filter);
 }
 
+function filterByCategory(){
+    const categoryElement= document.getElementById('categoryFilter');
+    const category= categoryElement.value;
+    if (category.toLowerCase() === ""){
+        displayProduct(data);
+        return;
+    }
+    const filteredProducts= data.filter(product => product.category.toLowerCase() === category.toLowerCase());
+    displayProduct(filteredProducts);
+}
+
 fetchData();

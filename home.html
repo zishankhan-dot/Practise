@@ -12,6 +12,16 @@
 </header>
 <section>
     <input type="text" id="searchBar" placeholder="Search for products..." onkeyup="filterProducts()">
+   <select id="categoryFilter" onchange="filterByCategory()">
+        <option value="" selected>All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="footwear">Footwear</option>
+        <option value="accessories">Accessories</option>
+        <option value="home decor">Home Decor</option>
+        <option value="fitness">Fitness</option>
+        <option value="home appliances">Home Appliances</option>
+        <option value="stationery">Stationery</option>
+    </select>
     <div id="products">
     </div>
 </section>
